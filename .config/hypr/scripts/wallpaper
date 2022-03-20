@@ -1,0 +1,4 @@
+#!/bin/bash
+
+wal -i ~/.config/hypr/wallpapers/"wallpaper.png" 2>/dev/null
+xwallpaper --zoom ~/.config/hypr/wallpapers/"wallpaper.png"

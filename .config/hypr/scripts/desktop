@@ -1,0 +1,12 @@
+if [ $(ps aux | grep unclutter | wc -l) -eq 1 ]; then
+	~/.config/hypr/scripts/wallpaper
+	xinput set-prop 16 345 1
+	unclutter &
+	bash "$HOME"/.config/hypr/scripts/compositor.sh
+	bash "$HOME"/.config/hypr/polybar/launch.sh
+	bash "$HOME"/.config/hypr/scripts/dunst.sh
+	xset s 0 0
+	xset dpms 0 0 0
+	mpd &
+	pulseaudio-equalizer enable
+fi
